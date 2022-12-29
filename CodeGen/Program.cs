@@ -1,9 +1,15 @@
-﻿namespace CodeGen
+﻿using System.Reflection;
+
+namespace CodeGen
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            var sonucList = "1;0;0;0;1;1;1".Split(";");
+            var sonucString = string.Join(";", sonucList);
+
+
             Kisi k = new Kisi {Id=1, Ad="Ali", Soyad="Diker" };
             var propList = typeof(Kisi).GetProperties();
             List<string> proJlist = new List<string>();
